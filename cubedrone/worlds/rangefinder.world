@@ -1,0 +1,1809 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <enable_wind>0</enable_wind>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <state world_name='default'>
+      <sim_time>50 333000000</sim_time>
+      <real_time>28 247021371</real_time>
+      <wall_time>1719231932 545683400</wall_time>
+      <iterations>27993</iterations>
+      <model name='drone'>
+        <pose>-0.013972 0.000347 0.171971 -0 -4.3e-05 0.008785</pose>
+        <scale>1 1 1</scale>
+        <link name='base_link'>
+          <pose>-0.013972 0.000347 0.171971 -0 -4.3e-05 0.008785</pose>
+          <velocity>-0.000211 -0.004133 -0.002861 0.040776 -0.004723 0.004482</velocity>
+          <acceleration>0.105379 2.64254 -0.144324 0.868034 0.244452 3.09507</acceleration>
+          <wrench>0.184433 4.62497 -0.252595 0 -0 0</wrench>
+        </link>
+        <link name='propbackleft'>
+          <pose>-0.200389 0.217717 0.171963 0 -4.3e-05 -0.014103</pose>
+          <velocity>-0.001161 -0.004959 0.005107 0.040789 -0.004769 -0.001244</velocity>
+          <acceleration>0.106217 2.65041 15.376 0.821711 -0.275968 3.13976</acceleration>
+          <wrench>0.008497 0.212033 1.23008 0 -0 0</wrench>
+        </link>
+        <link name='propbacklefttop'>
+          <pose>-0.200397 0.217717 0.360183 0 -4.3e-05 -0.014084</pose>
+          <velocity>-0.002071 -0.012586 0.005072 0.040716 -0.004888 -0.001241</velocity>
+          <acceleration>-1.76531 -12.2302 15.2758 0.626602 0.036591 3.13976</acceleration>
+          <wrench>-0.141225 -0.978418 1.22206 0 -0 0</wrench>
+        </link>
+        <link name='propbackright'>
+          <pose>-0.19654 -0.220266 0.171962 1e-06 -4.6e-05 -0.014202</pose>
+          <velocity>0.000707 -0.004906 -0.012747 0.040634 -0.004936 -0.00125</velocity>
+          <acceleration>0.15596 2.60085 -19.4505 0.482459 0.687442 3.13982</acceleration>
+          <wrench>0.012477 0.208068 -1.55604 0 -0 0</wrench>
+        </link>
+        <link name='propbackrighttop'>
+          <pose>-0.196548 -0.220267 0.360182 1e-06 -4.6e-05 -0.01427</pose>
+          <velocity>-0.000365 -0.012576 -0.012828 0.040794 -0.005181 -0.001255</velocity>
+          <acceleration>-1.85853 -12.3479 -19.5405 0.658085 0.958224 3.1398</acceleration>
+          <wrench>-0.148683 -0.987833 -1.56324 0 -0 0</wrench>
+        </link>
+        <link name='propfrontleft'>
+          <pose>0.168596 0.22096 0.171979 2e-06 -4.5e-05 -0.014402</pose>
+          <velocity>-0.001052 -0.003427 0.007219 0.040899 -0.005756 -0.001266</velocity>
+          <acceleration>0.057191 2.67338 19.3726 0.863807 1.47365 3.13975</acceleration>
+          <wrench>0.004575 0.213871 1.54981 0 -0 0</wrench>
+        </link>
+        <link name='propfrontlefttop'>
+          <pose>0.168587 0.22096 0.360199 2e-06 -4.5e-05 -0.014478</pose>
+          <velocity>-0.00215 -0.011179 0.007265 0.041001 -0.005912 -0.001272</velocity>
+          <acceleration>-2.102 -12.3153 19.4523 -2.11504 1.41682 -0.00183</acceleration>
+          <wrench>-0.16816 -0.985222 1.55619 0 -0 0</wrench>
+        </link>
+        <link name='propfrontright'>
+          <pose>0.172447 -0.217023 0.171979 3e-06 -4.7e-05 -0.014647</pose>
+          <velocity>0.000568 -0.003454 -0.010703 0.041121 -0.005899 -0.001287</velocity>
+          <acceleration>0.163789 2.70301 -15.3067 -2.02033 1.03354 -0.001795</acceleration>
+          <wrench>0.013103 0.216241 -1.22454 0 -0 0</wrench>
+        </link>
+        <link name='propfrontrighttop'>
+          <pose>0.172438 -0.217023 0.360199 3e-06 -4.7e-05 -0.014767</pose>
+          <velocity>-0.000566 -0.011209 -0.010699 0.041114 -0.005911 -0.001299</velocity>
+          <acceleration>-2.0699 -12.2786 -15.2663 -2.10423 0.899763 -0.001795</acceleration>
+          <wrench>-0.165592 -0.982287 -1.22131 0 -0 0</wrench>
+        </link>
+        <link name='propmidleft'>
+          <pose>0.171044 -0.058029 0.266979 1.571 -0.000127 0.008793</pose>
+          <velocity>-0.00058 -0.007392 -0.004157 0.041073 0.000344 0.003504</velocity>
+          <acceleration>-1.0227 -4.88388 -2.59499 -2.22586 0.697824 0.113823</acceleration>
+          <wrench>-0.000276 -0.001319 -0.000701 0 -0 0</wrench>
+        </link>
+        <link name='propmidright'>
+          <pose>-0.197942 -0.061273 0.266962 1.571 -0.000127 0.008793</pose>
+          <velocity>-0.000569 -0.008684 -0.006501 0.041073 0.000344 0.003503</velocity>
+          <acceleration>-1.02205 -4.94952 -7.2378 -2.22575 0.697825 0.113532</acceleration>
+          <wrench>-0.000276 -0.001336 -0.001954 0 -0 0</wrench>
+        </link>
+        <link name='wheelbackleft'>
+          <pose>-0.200228 -0.311301 0.029962 0.845879 -0.000881 0.008814</pose>
+          <velocity>0.000779 0.000543 -0.017145 0.428994 0.20558 -0.001513</velocity>
+          <acceleration>0.857629 13.4622 -27.4829 0.449245 -0.379993 -1.84801</acceleration>
+          <wrench>0.042881 0.673109 -1.37414 0 -0 0</wrench>
+        </link>
+        <link name='wheelbacklefttop'>
+          <pose>-0.200126 -0.326307 0.471954 5.8e-05 -6e-05 0.008791</pose>
+          <velocity>0.000184 -0.016215 -0.015774 3.6e-05 -0.003326 0.003891</velocity>
+          <acceleration>-2.46089 -20.3819 -26.7696 -3.01807 -0.034326 -2.91885</acceleration>
+          <wrench>-0.123044 -1.01909 -1.33848 0 -0 0</wrench>
+        </link>
+        <link name='wheelbackright'>
+          <pose>0.177758 -0.307979 0.029976 0.780862 -0.000879 0.008766</pose>
+          <velocity>0.000567 0.002373 -0.01359 0.382167 0.204897 0.010414</velocity>
+          <acceleration>0.591487 13.8861 -21.7074 -2.70865 -1.55093 0.781242</acceleration>
+          <wrench>0.029574 0.694305 -1.08537 0 -0 0</wrench>
+        </link>
+        <link name='wheelbackrighttop'>
+          <pose>0.177856 -0.322981 0.471983 0.000458 -6.9e-05 0.008786</pose>
+          <velocity>0.001015 -0.015443 -0.015935 5.3e-05 -0.001087 0.00478</velocity>
+          <acceleration>-1.79168 -20.9728 -24.4478 0.10214 -1.48967 1.01873</acceleration>
+          <wrench>-0.089584 -1.04864 -1.22239 0 -0 0</wrench>
+        </link>
+        <link name='wheelfrontleft'>
+          <pose>-0.205682 0.308675 0.029958 -0.921983 0.000805 0.008742</pose>
+          <velocity>-0.001162 0.000692 0.009462 -0.023112 -0.038457 0.006454</velocity>
+          <acceleration>0.729484 13.8629 22.7474 2.23085 1.06359 0.228718</acceleration>
+          <wrench>0.036474 0.693144 1.13737 0 -0 0</wrench>
+        </link>
+        <link name='wheelfrontlefttop'>
+          <pose>-0.205837 0.32367 0.471963 1.8e-05 -6e-05 0.008785</pose>
+          <velocity>-0.002464 -0.016914 0.009576 2.9e-05 -0.002791 0.004399</velocity>
+          <acceleration>-2.33825 -21.3407 24.2001 -3.02607 -0.638849 2.98467</acceleration>
+          <wrench>-0.116913 -1.06703 1.21001 0 -0 0</wrench>
+        </link>
+        <link name='wheelfrontright'>
+          <pose>0.172302 0.311995 0.029986 -0.975572 0.000821 0.008812</pose>
+          <velocity>-0.000984 0.002491 0.010087 -0.083067 -0.034825 0.003662</velocity>
+          <acceleration>0.937489 13.9235 26.5917 -2.59928 1.05051 -1.85085</acceleration>
+          <wrench>0.046874 0.696175 1.32959 0 -0 0</wrench>
+        </link>
+        <link name='wheelfrontrighttop'>
+          <pose>0.172153 0.326994 0.47198 -0.000312 -4.6e-05 0.008784</pose>
+          <velocity>-0.002957 -0.0155 0.011112 1.1e-05 -0.004348 0.004472</velocity>
+          <acceleration>-2.36543 -21.233 27.3306 -3.0228 -0.388253 2.83611</acceleration>
+          <wrench>-0.118271 -1.06165 1.36653 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='house'>
+        <pose>0.470262 -0.376779 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='Wall_10'>
+          <pose>0.470262 -8.67678 0 0 -0 3.14159</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_11'>
+          <pose>-8.45474 -0.376779 0 0 -0 1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_8'>
+          <pose>0.470262 7.92322 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+        <link name='Wall_9'>
+          <pose>9.39526 -0.376779 0 0 0 -1.5708</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose>0 0 10 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>23.0443 -9.98956 14.0948 -0 0.519643 2.62819</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <wind/>
+    <model name='drone'>
+      <link name='base_link'>
+        <inertial>
+          <pose>0 1.9e-05 1.2e-05 0 -0 0</pose>
+          <mass>1.7502</mass>
+          <inertia>
+            <ixx>0.0046106</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.00250535</iyy>
+            <iyz>-3.32062e-06</iyz>
+            <izz>0.00600525</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.125</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__rangebottom_link_collision_1'>
+          <pose>0 0.162 -0.025 -1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.015 0.015</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__rangetop_link_collision_2'>
+          <pose>0 0.162 0.23 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.015 0.015</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/base_link.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__rangebottom_link_visual_1'>
+          <pose>0 0.162 -0.025 -1.571 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.015 0.015</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__rangetop_link_visual_2'>
+          <pose>0 0.162 0.23 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.015 0.015 0.015</size>
+            </box>
+          </geometry>
+        </visual>
+        <sensor name='bottom_lidar_sensor' type='ray'>
+          <visualize>1</visualize>
+          <update_rate>20</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>20</samples>
+                <resolution>1</resolution>
+                <min_angle>0.785</min_angle>
+                <max_angle>2.356</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.06</min>
+              <max>5</max>
+              <resolution>0.025</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name='gazebo_ros_bottom_lidar_controller' filename='libgazebo_ros_laser.so'>
+            <topicName>/bottom_scan</topicName>
+            <frameName>rangebottom_link</frameName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose>0 0.162 -0.025 -1.571 0 0</pose>
+        </sensor>
+        <sensor name='head_lidar_sensor' type='ray'>
+          <visualize>1</visualize>
+          <update_rate>20</update_rate>
+          <ray>
+            <scan>
+              <horizontal>
+                <samples>20</samples>
+                <resolution>1</resolution>
+                <min_angle>0.785</min_angle>
+                <max_angle>2.356</max_angle>
+              </horizontal>
+              <vertical>
+                <samples>1</samples>
+                <min_angle>0</min_angle>
+                <max_angle>0</max_angle>
+              </vertical>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>15</max>
+              <resolution>0.025</resolution>
+            </range>
+            <noise>
+              <type>gaussian</type>
+              <mean>0</mean>
+              <stddev>0.01</stddev>
+            </noise>
+          </ray>
+          <plugin name='gazebo_ros_head_lidar_controller' filename='libgazebo_ros_laser.so'>
+            <topicName>/top_scan</topicName>
+            <frameName>rangetop_link</frameName>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+          <pose>0 0.162 0.23 0 -0 0</pose>
+        </sensor>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pbl' type='revolute'>
+        <pose relative_to='base_link'>-0.1845 0.219 0 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propbackleft</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propbackleft'>
+        <pose relative_to='pbl'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propbackleft_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackleft.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propbackleft_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackleft.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pblt' type='revolute'>
+        <pose relative_to='base_link'>-0.1845 0.219 0.18822 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propbacklefttop</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propbacklefttop'>
+        <pose relative_to='pblt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propbacklefttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbacklefttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propbacklefttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbacklefttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pbr' type='revolute'>
+        <pose relative_to='base_link'>-0.1845 -0.219 0 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propbackright</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propbackright'>
+        <pose relative_to='pbr'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propbackright_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackright.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propbackright_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackright.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pbrt' type='revolute'>
+        <pose relative_to='base_link'>-0.1845 -0.219 0.18822 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propbackrighttop</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propbackrighttop'>
+        <pose relative_to='pbrt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propbackrighttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackrighttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propbackrighttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propbackrighttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pfl' type='revolute'>
+        <pose relative_to='base_link'>0.1845 0.219 0 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propfrontleft</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propfrontleft'>
+        <pose relative_to='pfl'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propfrontleft_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontleft.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propfrontleft_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontleft.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pflt' type='revolute'>
+        <pose relative_to='base_link'>0.1845 0.219 0.18822 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propfrontlefttop</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propfrontlefttop'>
+        <pose relative_to='pflt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propfrontlefttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontlefttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propfrontlefttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontlefttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pfr' type='revolute'>
+        <pose relative_to='base_link'>0.1845 -0.219 0 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propfrontright</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propfrontright'>
+        <pose relative_to='pfr'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propfrontright_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontright.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propfrontright_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontright.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pfrt' type='revolute'>
+        <pose relative_to='base_link'>0.1845 -0.219 0.18822 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propfrontrighttop</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propfrontrighttop'>
+        <pose relative_to='pfrt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.08</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propfrontrighttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontrighttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propfrontrighttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propfrontrighttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pml' type='revolute'>
+        <pose relative_to='base_link'>0.1845 -0.06 0.095 1.571 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propmidleft</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propmidleft'>
+        <pose relative_to='pml'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.00027</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propmidleft_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propmidleft.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propmidleft_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propmidleft.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='pmr' type='revolute'>
+        <pose relative_to='base_link'>-0.1845 -0.06 0.095 1.571 -0 0</pose>
+        <parent>base_link</parent>
+        <child>propmidright</child>
+        <axis>
+          <xyz>0 0 -1</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='propmidright'>
+        <pose relative_to='pmr'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.00027</mass>
+          <inertia>
+            <ixx>4e-05</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>4e-05</iyy>
+            <iyz>0</iyz>
+            <izz>2.5e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='propmidright_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propmidright.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='propmidright_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.8 0.8 0.8</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/propmidright.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wbl' type='revolute'>
+        <pose relative_to='base_link'>-0.189 -0.31 -0.142 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelbackleft</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelbackleft'>
+        <pose relative_to='wbl'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelbackleft_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackleft.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelbackleft_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackleft.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wblt' type='revolute'>
+        <pose relative_to='base_link'>-0.189 -0.325 0.3 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelbacklefttop</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelbacklefttop'>
+        <pose relative_to='wblt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelbacklefttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbacklefttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelbacklefttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbacklefttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wbr' type='revolute'>
+        <pose relative_to='base_link'>0.189 -0.31 -0.142 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelbackright</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelbackright'>
+        <pose relative_to='wbr'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelbackright_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackright.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelbackright_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackright.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wbrt' type='revolute'>
+        <pose relative_to='base_link'>0.189 -0.325 0.3 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelbackrighttop</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelbackrighttop'>
+        <pose relative_to='wbrt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelbackrighttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackrighttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelbackrighttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelbackrighttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wfl' type='revolute'>
+        <pose relative_to='base_link'>-0.189 0.31 -0.142 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelfrontleft</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelfrontleft'>
+        <pose relative_to='wfl'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelfrontleft_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontleft.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelfrontleft_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontleft.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wflt' type='revolute'>
+        <pose relative_to='base_link'>-0.189 0.325 0.3 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelfrontlefttop</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelfrontlefttop'>
+        <pose relative_to='wflt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelfrontlefttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontlefttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelfrontlefttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontlefttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wfr' type='revolute'>
+        <pose relative_to='base_link'>0.189 0.31 -0.142 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelfrontright</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelfrontright'>
+        <pose relative_to='wfr'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelfrontright_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontright.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelfrontright_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontright.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='wfrt' type='revolute'>
+        <pose relative_to='base_link'>0.189 0.325 0.3 0 -0 0</pose>
+        <parent>base_link</parent>
+        <child>wheelfrontrighttop</child>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-1e+16</lower>
+            <upper>1e+16</upper>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+      <link name='wheelfrontrighttop'>
+        <pose relative_to='wfrt'>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 -0 0</pose>
+          <mass>0.05</mass>
+          <inertia>
+            <ixx>7.16e-06</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>3.6e-06</iyy>
+            <iyz>0</iyz>
+            <izz>3.6e-06</izz>
+          </inertia>
+        </inertial>
+        <collision name='wheelfrontrighttop_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontrighttop.STL</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='wheelfrontrighttop_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/emchung/dev_ws/src/cubedrone/meshes/wheelfrontrighttop.STL</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <plugin name='cubedrone_plugin' filename='libcubedrone_plugin.so'>
+        <updateRate>20</updateRate>
+        <publishTf>1</publishTf>
+        <rotorThrustCoeff>0.00025</rotorThrustCoeff>
+        <rotorTorqueCoeff>0.000075</rotorTorqueCoeff>
+        <robotNamespace>/</robotNamespace>
+      </plugin>
+      <frame name='rangebottom_joint' attached_to='base_link'>
+        <pose>0 0.162 -0.025 -1.571 0 0</pose>
+      </frame>
+      <frame name='rangebottom_link' attached_to='rangebottom_joint'/>
+      <frame name='rangetop_joint' attached_to='base_link'>
+        <pose>0 0.162 0.23 0 -0 0</pose>
+      </frame>
+      <frame name='rangetop_link' attached_to='rangetop_joint'/>
+      <pose>0 0 0.1725 0 -0 0</pose>
+    </model>
+    <model name='house'>
+      <pose>0.470262 -0.376779 0 0 -0 0</pose>
+      <link name='Wall_10'>
+        <collision name='Wall_10_Collision'>
+          <geometry>
+            <box>
+              <size>18 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_10_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>18 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0 -8.3 0 0 -0 3.14159</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_11'>
+        <collision name='Wall_11_Collision'>
+          <geometry>
+            <box>
+              <size>16.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_11_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-8.925 -0 0 0 -0 1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_8'>
+        <collision name='Wall_8_Collision'>
+          <geometry>
+            <box>
+              <size>18 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_8_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>18 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>-0 8.3 0 0 -0 0</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='Wall_9'>
+        <collision name='Wall_9_Collision'>
+          <geometry>
+            <box>
+              <size>16.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='Wall_9_Visual'>
+          <pose>0 0 1.25 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>16.75 0.15 2.5</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+            <ambient>1 1 1 1</ambient>
+          </material>
+          <meta>
+            <layer>0</layer>
+          </meta>
+        </visual>
+        <pose>8.925 -0 0 0 -0 -1.5708</pose>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <static>1</static>
+    </model>
+  </world>
+</sdf>

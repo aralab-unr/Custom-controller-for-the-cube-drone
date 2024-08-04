@@ -22,7 +22,7 @@ source
 This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
 ### a. **Flying mode:**   
 ```
-# start simulator
+# start ros server
 roscore
 # start gazebo simulator
 

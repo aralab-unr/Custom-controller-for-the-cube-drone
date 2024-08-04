@@ -24,11 +24,8 @@ This section shows how to run the cube-drone and the results of each mode **flyi
 ```
 # start simulator
 roscore
-
 # start gazebo simulator
-roslaunch remote_control dynamic_navigation_rviz.launch # if your test env has dynamic obstacles
 
 # start flying controller
-roslaunch autonomous_flight dynamic_navigation.launch # if your test env has dynamic obstacles
 
 ```

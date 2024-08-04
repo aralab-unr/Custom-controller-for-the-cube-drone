@@ -3,7 +3,8 @@ This is the ROS simulation and the details of the custom controller of the cube 
 This custom controller is designed in:
 - Ubuntu 20.04
 - ROS Noetic
-
+- Gazebo 11
+- Solidworks 2023
 
 ```shell
 

@@ -12,7 +12,7 @@ Following these commands to install the package:
 cd ~/catkin_ws/src
 git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
 
-# step 2: follow the standard catkin_make procedure
+# step 2: follow the standard catkin_make
 cd ~/catkin_ws
 catkin_make
 # step 3: source environment variable
@@ -23,19 +23,12 @@ This section shows how to run the cube-drone and the results of each mode **flyi
 ### a. **Flying mode:**   
 ```
 # start simulator
-roslaunch uav_simulator start.launch # recommand to use the corridor env for your first trial
+roscore
 
-# open the Rviz visualization
+# start gazebo simulator
 roslaunch remote_control dynamic_navigation_rviz.launch # if your test env has dynamic obstacles
 
-# run the navigation program
+# start flying controller
 roslaunch autonomous_flight dynamic_navigation.launch # if your test env has dynamic obstacles
 
-# --------------------------------------------------------------------------------------
-# (alternatively, if your test env is purely static, you can run the following instead)
-# open the Rviz visualization
-roslaunch remote_control navigation_rviz.launch # if your test env only has static obstacles
-
-# run the navigation program
-roslaunch autonomous_flight navigation.launch # if your test env only has static obstacles
 ```

@@ -4,7 +4,6 @@ This custom controller is designed in:
 - Ubuntu 20.04
 - ROS Noetic
 - Gazebo 11
-- Solidworks 2023
   
 Following these commands to install the package:
 ```shell

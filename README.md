@@ -39,7 +39,7 @@ roscore
 roscore
 # start gazebo simulator
 
-# start flying controller
+# start moving controller
 
 ```
 ### c. **Climbing mode:**   
@@ -50,5 +50,8 @@ roscore
 # start ros server
 roscore
 # start gazebo simulator
+
+# start climbing controller
+
 ```
 

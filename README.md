@@ -14,4 +14,6 @@ git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cu
 # step 2: follow the standard catkin_make procedure
 cd ~/catkin_ws
 catkin_make
+# step 3: source environment variable
+source 
 ```

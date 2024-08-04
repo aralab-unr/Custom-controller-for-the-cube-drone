@@ -51,8 +51,6 @@ roscore
 roscore
 # start gazebo simulator
 
-# start climbing controller
+# start flying controller
 
 ```
-
-abc

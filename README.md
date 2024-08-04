@@ -21,9 +21,31 @@ source
 This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
 ### a. **Flying mode:**   
 <p align='center'>
-    <img src="cubedrone/images/schemecubeclimbing.png" width="600"/>
+    <img src="cubedrone/images/schemecubeflying.png" width="600"/>
 </p>
 
+```
+# start ros server
+roscore
+# start gazebo simulator
+
+# start flying controller
+
+```
+### b. **Moving mode:**   
+
+```
+# start ros server
+roscore
+# start gazebo simulator
+
+# start flying controller
+
+```
+### b. **Climbing mode:**   
+<p align='center'>
+    <img src="cubedrone/images/schemecubeclimbing.png" width="600"/>
+</p>
 ```
 # start ros server
 roscore

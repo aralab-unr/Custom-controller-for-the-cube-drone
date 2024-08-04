@@ -21,3 +21,21 @@ source
 # Contents
 This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
 ### a. **Flying mode:**   
+```
+# start simulator
+roslaunch uav_simulator start.launch # recommand to use the corridor env for your first trial
+
+# open the Rviz visualization
+roslaunch remote_control dynamic_navigation_rviz.launch # if your test env has dynamic obstacles
+
+# run the navigation program
+roslaunch autonomous_flight dynamic_navigation.launch # if your test env has dynamic obstacles
+
+# --------------------------------------------------------------------------------------
+# (alternatively, if your test env is purely static, you can run the following instead)
+# open the Rviz visualization
+roslaunch remote_control navigation_rviz.launch # if your test env only has static obstacles
+
+# run the navigation program
+roslaunch autonomous_flight navigation.launch # if your test env only has static obstacles
+```

@@ -6,7 +6,7 @@ This custom controller is designed in:
 - Gazebo 11
 - Solidworks 2023
   
-Installing the package with the following commands:
+Following these commands to install the package:
 ```shell
 # step 1: clone this repo to your workspace
 cd ~/catkin_ws/src

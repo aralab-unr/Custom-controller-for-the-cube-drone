@@ -5,7 +5,7 @@ This custom controller is designed in:
 - ROS Noetic
 - Gazebo 11
 - Solidworks 2023
-- 
+  
 Installing the package with the following commands:
 ```shell
 # step 1: clone this repo to your workspace

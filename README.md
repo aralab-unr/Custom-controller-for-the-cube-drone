@@ -42,7 +42,7 @@ roscore
 # start flying controller
 
 ```
-### b. **Climbing mode:**   
+### c. **Climbing mode:**   
 <p align='center'>
     <img src="cubedrone/images/schemecubeclimbing.png" />
 </p>
@@ -50,7 +50,5 @@ roscore
 # start ros server
 roscore
 # start gazebo simulator
-
-# start flying controller
-
 ```
+

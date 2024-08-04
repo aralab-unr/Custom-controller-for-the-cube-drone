@@ -21,7 +21,7 @@ source
 This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
 ### a. **Flying mode:**   
 <p align='center'>
-    <img src="cubedrone/images/schemecubeclimbing.png" width="800"/>
+    <img src="cubedrone/images/schemecubeclimbing.png" width="600"/>
 </p>
 
 ```

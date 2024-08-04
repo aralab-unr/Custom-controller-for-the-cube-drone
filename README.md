@@ -19,3 +19,4 @@ catkin_make
 source 
 ```
 # Contents
+This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**

@@ -9,7 +9,7 @@ Installing the package with the following commands:
 ```shell
 # step 1: clone this repo to your workspace
 cd ~/catkin_ws/src
-git clone --recursive https://github.com/Zhefan-Xu/CERLAB-UAV-Autonomy.git](https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
+git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
 
 # step 2: follow the standard catkin_make procedure
 cd ~/catkin_ws

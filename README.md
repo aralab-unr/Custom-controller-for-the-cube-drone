@@ -20,6 +20,7 @@ source
 # Contents
 This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
 ### a. **Flying mode:**   
+An overview of the flying controller frameworks is shown as follows:
 <p align='center'>
     <img src="cubedrone/images/schemecubeflying.png" />
 </p>
@@ -43,6 +44,7 @@ roscore
 
 ```
 ### c. **Climbing mode:**   
+An overview of the climbing controller frameworks is shown as follows:
 <p align='center'>
     <img src="cubedrone/images/schemecubeclimbing.png" />
 </p>

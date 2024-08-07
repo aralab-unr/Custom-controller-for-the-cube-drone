@@ -19,14 +19,14 @@ catkin_make
 source 
 ```
 # Contents
-This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode. The cube-drone parameters are imported from Solidworks as:
+This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode. The cube-drone parameters are imported from URDF file as:
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| m | List all new or modified files | m | List all new or modified files |
-| $I_{xx}$ | Show file differences that haven't been staged | $I_{xx}$ | Show file differences that haven't been staged |
-| $I_{xx}$ | Show file differences that haven't been staged | $I_{xx}$ | Show file differences that haven't been staged |
-| $I_{xx}$ | Show file differences that haven't been staged | $I_{xx}$ | Show file differences that haven't been staged |
+| m | List all new or modified files | $k_t$ | List all new or modified files |
+| $I_{xx}$ | Show file differences that haven't been staged | $k_d$ | Show file differences that haven't been staged |
+| $I_{yy}$ | Show file differences that haven't been staged | $l_x$ | Show file differences that haven't been staged |
+| $I_{zz}$ | Show file differences that haven't been staged | $l_y$ | Show file differences that haven't been staged |
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:
@@ -65,7 +65,23 @@ roscore
 # start moving controller
 
 ```
-
+\begin{algorithm}
+\caption{Moving mode for cube drone}
+\begin{algorithmic}[1]
+    \State Check the cube drone position and yaw angle
+    \State $\psi_r = \arctan(\frac{y_r-y}{x_r-x})$
+    \If {$\left|\psi_r - \psi\right| < 0.05 $ \& $ \left|x_r - x\right| < 0.05$ \& $ \left|y_r - y \right| < 0.05$ }
+            \State End the algorithm
+        \Else
+    \If {$\left|\psi_r - \psi\right| > 0.05 $}
+    \eqref{fxmove}, \eqref{w10move},\eqref{w9move}.
+    \Else
+    \State $ v_r = \frac{1}{1 + \exp(-e_{xy})} - 0.5$, and \eqref{fxphase2}, \eqref{w10phase2},\eqref{w9phase2}.
+    \EndIf
+        \EndIf
+\end{algorithmic}
+\label{algorithmmoving}
+\end{algorithm}
 
 
 https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e

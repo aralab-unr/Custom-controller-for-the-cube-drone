@@ -20,7 +20,7 @@ source
 # Contents
 This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode.
 ### a. **Flying mode:**   
-An overview of the flying controller frameworks is shown as follows:
+An overview of the flying controller framework is shown as follows:
 <p align='center'>
     <img src="cubedrone/images/schemecubeflying.png" />
 </p>
@@ -34,6 +34,12 @@ roscore
 # start flying controller
 
 ```
+
+
+
+https://github.com/user-attachments/assets/a751fc7a-9035-4bb7-8fea-c892e7abaf63
+
+
 ### b. **Moving mode:**   
 
 ```
@@ -45,7 +51,7 @@ roscore
 
 ```
 ### c. **Climbing mode:**   
-An overview of the climbing controller frameworks is shown as follows:
+An overview of the climbing controller framework is shown as follows:
 <p align='center'>
     <img src="cubedrone/images/schemecubeclimbing.png" />
 </p>

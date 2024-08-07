@@ -18,7 +18,7 @@ catkin_make
 source 
 ```
 # Contents
-This section shows how to run the cube-drone and the results of each mode **flying**, **running**, and **climbing**
+This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode.
 ### a. **Flying mode:**   
 An overview of the flying controller frameworks is shown as follows:
 <p align='center'>

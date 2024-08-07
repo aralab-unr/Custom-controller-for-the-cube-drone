@@ -20,10 +20,11 @@ source
 ```
 # Contents
 This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode. The cube-drone parameters are imported from Solidworks as:
+
 | Parameter | Value | 
 | m | --- |
-| I_{xx} | List all new or modified files |
-| I_{yy} | Show file differences that haven't been staged |
+| $I_{xx}$ | |
+| $I_{yy}$ | |
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:

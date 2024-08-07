@@ -24,7 +24,7 @@ An overview of the flying controller frameworks is shown as follows:
 <p align='center'>
     <img src="cubedrone/images/schemecubeflying.png" />
 </p>
-
+Follow these commands in order to run the flying mode:
 ```
 # start ros server
 roscore

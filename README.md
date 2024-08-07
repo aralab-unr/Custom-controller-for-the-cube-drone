@@ -5,7 +5,7 @@ This custom controller is designed in:
 - ROS Noetic
 - Gazebo 11
   
-Following these commands to install the package:
+Follow these commands to install the package:
 ```shell
 # step 1: clone this repo to your workspace
 cd ~/catkin_ws/src

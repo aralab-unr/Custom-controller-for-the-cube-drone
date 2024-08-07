@@ -50,6 +50,12 @@ roscore
 # start moving controller
 
 ```
+
+
+
+https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e
+
+
 ### c. **Climbing mode:**   
 An overview of the climbing controller framework is shown as follows:
 <p align='center'>
@@ -64,3 +70,7 @@ roscore
 # start flying controller
 
 ```
+
+
+https://github.com/user-attachments/assets/c17747fc-f272-4769-bdf9-9989708ab5bc
+

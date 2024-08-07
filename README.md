@@ -65,7 +65,7 @@ roscore
 # start moving controller
 
 ```
-<p align='right'>
+<p align='left'>
     <img src="cubedrone/images/algorithmcube.png" width="350" />
 </p>
 

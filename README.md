@@ -66,7 +66,7 @@ roscore
 
 ```
 <p align='center'>
-    <img src="cubedrone/images/schemecubeflying.png" />
+    <img src="cubedrone/images/algorithmcube.png" width="350" />
 </p>
 
 https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e

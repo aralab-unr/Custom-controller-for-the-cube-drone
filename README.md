@@ -65,23 +65,7 @@ roscore
 # start moving controller
 
 ```
-\begin{algorithm}
-\caption{Moving mode for cube drone}
-\begin{algorithmic}[1]
-    \State Check the cube drone position and yaw angle
-    \State $\psi_r = \arctan(\frac{y_r-y}{x_r-x})$
-    \If {$\left|\psi_r - \psi\right| < 0.05 $ \& $ \left|x_r - x\right| < 0.05$ \& $ \left|y_r - y \right| < 0.05$ }
-            \State End the algorithm
-        \Else
-    \If {$\left|\psi_r - \psi\right| > 0.05 $}
-    \eqref{fxmove}, \eqref{w10move},\eqref{w9move}.
-    \Else
-    \State $ v_r = \frac{1}{1 + \exp(-e_{xy})} - 0.5$, and \eqref{fxphase2}, \eqref{w10phase2},\eqref{w9phase2}.
-    \EndIf
-        \EndIf
-\end{algorithmic}
-\label{algorithmmoving}
-\end{algorithm}
+![image](https://github.com/user-attachments/assets/9f1f77e7-f951-43e4-9eda-1b03a488d58b)
 
 
 https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e

@@ -39,6 +39,12 @@ roscore
 
 https://github.com/user-attachments/assets/a751fc7a-9035-4bb7-8fea-c892e7abaf63
 
+The parameter of the flying controller is as follows:
+
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
 ### b. **Moving mode:**   
 

@@ -1,4 +1,5 @@
-This is the ROS simulation and the details of the custom controller of the cube drone for the flying mode, running mode, and climbing mode.
+This is the ROS simulation and the details of the custom controller of the cube-drone.  [Cube_drone__ICRA_ARA.pdf](https://github.com/user-attachments/files/16533043/Cube_drone__ICRA_ARA.pdf)
+
 # Software requirement & Setup
 This custom controller is designed in:
 - Ubuntu 20.04

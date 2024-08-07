@@ -44,16 +44,16 @@ roscore
 
 ```
 
-
-
 https://github.com/user-attachments/assets/a751fc7a-9035-4bb7-8fea-c892e7abaf63
 
 The parameter of the flying controller is as follows:
 
-| Command | Description |
-| --- | --- |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
+| Parameter | Value | Parameter | Value |
+| --- | --- | --- | --- 
+| m | List all new or modified files | $k_t$ | List all new or modified files |
+| $I_{xx}$ | Show file differences that haven't been staged | $k_d$ | Show file differences that haven't been staged |
+| $I_{yy}$ | Show file differences that haven't been staged | $l_x$ | Show file differences that haven't been staged |
+| $I_{zz}$ | Show file differences that haven't been staged | $l_y$ | Show file differences that haven't been staged |
 
 ### b. **Moving mode:**   
 
@@ -71,6 +71,12 @@ roscore
 
 https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e
 
+| Parameter | Value | Parameter | Value |
+| --- | --- | --- | --- 
+| m | List all new or modified files | $k_t$ | List all new or modified files |
+| $I_{xx}$ | Show file differences that haven't been staged | $k_d$ | Show file differences that haven't been staged |
+| $I_{yy}$ | Show file differences that haven't been staged | $l_x$ | Show file differences that haven't been staged |
+| $I_{zz}$ | Show file differences that haven't been staged | $l_y$ | Show file differences that haven't been staged |
 
 ### c. **Climbing mode:**   
 An overview of the climbing controller framework is shown as follows:
@@ -86,6 +92,13 @@ roscore
 # start flying controller
 
 ```
+
+| Parameter | Value | Parameter | Value |
+| --- | --- | --- | --- 
+| m | List all new or modified files | $k_t$ | List all new or modified files |
+| $I_{xx}$ | Show file differences that haven't been staged | $k_d$ | Show file differences that haven't been staged |
+| $I_{yy}$ | Show file differences that haven't been staged | $l_x$ | Show file differences that haven't been staged |
+| $I_{zz}$ | Show file differences that haven't been staged | $l_y$ | Show file differences that haven't been staged |
 
 
 https://github.com/user-attachments/assets/c17747fc-f272-4769-bdf9-9989708ab5bc

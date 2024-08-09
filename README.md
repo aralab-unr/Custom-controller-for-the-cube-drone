@@ -80,10 +80,7 @@ https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| $k_{px}$ |  | $PID_z$ | List all new or modified files |
-| $k_{px}$ |  | $PID_{\phi}$ | Show file differences that haven't been staged |
-| $k_{px}$ |  | $PID_{\theta}$ | Show file differences that haven't been staged |
-| $k_{px}$ |  | $PID_{\psi}$ | Show file differences that haven't been staged |
+| $\text{PID}_{\psi}$ |  | $\text{PID}_{v}$ |  |
 
 ### c. **Climbing mode:**   
 An overview of the climbing controller framework is shown as follows:

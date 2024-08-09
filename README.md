@@ -57,10 +57,10 @@ The parameter of the flying controller is as follows:
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| $k_{px}$ |  | $\text{PID}_z$ | List all new or modified files |
-| $k_{px}$ |  | $\text{PID}_{\phi}$ | Show file differences that haven't been staged |
-| $k_{px}$ |  | $\text{PID}_{\theta}$ | Show file differences that haven't been staged |
-| $k_{px}$ |  | $\text{PID}_{\psi}$ | Show file differences that haven't been staged |
+| $k_{px}$ |  | $\text{PID}_z$ | P =; I=; D= |
+| $k_{dx}$ |  | $\text{PID}_{\phi}$ | P =; I=; D= |
+| $k_{py}$ |  | $\text{PID}_{\theta}$ | P =; I=; D= |
+| $k_{dy}$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
 
 ### b. **Moving mode:**   
 

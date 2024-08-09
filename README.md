@@ -1,22 +1,28 @@
-This is the ROS simulation and the details of the custom controller of the cube-drone. This repository is to clarify this manuscript: [Cube_drone__ICRA_ARA.pdf](https://github.com/user-attachments/files/16533043/Cube_drone__ICRA_ARA.pdf).
+# Cube-Drone ROS Simulation and Custom Controller
 
-# Software requirement & Setup
-This custom controller is designed in:
+This repository contains the ROS simulation and details of the custom controller for the cube-drone. It clarifies the contents of the manuscript: [Cube_drone__ICRA_ARA.pdf](https://github.com/user-attachments/files/16533043/Cube_drone__ICRA_ARA.pdf).
+
+## Software Requirements & Setup
+
+The custom controller is designed for:
+
 - Ubuntu 20.04
 - ROS Noetic
 - Gazebo 11
-  
+
 Follow these commands to install the package:
+
 ```shell
-# step 1: clone this repo to your workspace
+# Step 1: Clone this repo into your workspace
 cd ~/catkin_ws/src
 git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
 
-# step 2: follow the standard catkin_make
+# Step 2: Build the workspace using catkin_make
 cd ~/catkin_ws
 catkin_make
-# step 3: source environment variable
-source 
+
+# Step 3: Source the environment variables
+source devel/setup.bash
 ```
 # Contents
 This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode. The cube-drone parameters are imported from URDF file as:

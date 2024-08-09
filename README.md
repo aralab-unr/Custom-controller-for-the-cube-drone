@@ -29,10 +29,10 @@ This section shows how to run the simulation and the results of each **flying**,
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| m | 2.8 (kg) | $k_t$ | $2.5.10^{-4}$ |
-| $I_{xx}$ | 0.0044 | $k_d$ | $7.5.10^{-5}$ |
-| $I_{yy}$ | 0.0023 | $l_x$ | 0.219 |
-| $I_{zz}$ | 0.0058 | $l_y$ | 0.1845 |
+| m | 2.8 (kg) | $k_t$ | $2.5.10^{-4}$ $(N.s^2)$ |
+| $I_{xx}$ | 0.0044 $(kg.m^2)$ | $k_d$ | $7.5.10^{-5}$ $(Nm.s^2)$ |
+| $I_{yy}$ | 0.0023 $(kg.m^2)$ | $l_x$ | 0.219 (m) |
+| $I_{zz}$ | 0.0058 $(kg.m^2)$ | $l_y$ | 0.1845 (m) |
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:

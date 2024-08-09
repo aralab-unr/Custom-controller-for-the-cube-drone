@@ -4,7 +4,7 @@ This repository contains the ROS simulation and details of the custom controller
 
 ## Software Requirements & Setup
 
-The custom controller is designed for:
+The custom controller is designed in:
 
 - Ubuntu 20.04
 - ROS Noetic

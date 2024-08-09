@@ -30,9 +30,9 @@ This section shows how to run the simulation and the results of each **flying**,
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
 | m | 2.8 (kg) | $k_t$ | $2.5.10^{-4}$ |
-| $I_{xx}$ | 0.0044 | $k_d$ | Show file differences that haven't been staged |
-| $I_{yy}$ | 0.0023 | $l_x$ | Show file differences that haven't been staged |
-| $I_{zz}$ | 0.0058 | $l_y$ | Show file differences that haven't been staged |
+| $I_{xx}$ | 0.0044 | $k_d$ | $7.5.10^{-5}$ |
+| $I_{yy}$ | 0.0023 | $l_x$ | 0.219 |
+| $I_{zz}$ | 0.0058 | $l_y$ | 0.1845 |
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:

@@ -33,6 +33,7 @@ This section shows how to run the simulation and the results of each **flying**,
 | $I_{xx}$ | 0.0044 $(kg.m^2)$ | $k_d$ | $7.5.10^{-5}$ $(Nm.s^2)$ |
 | $I_{yy}$ | 0.0023 $(kg.m^2)$ | $l_x$ | $0.219 (m)$ |
 | $I_{zz}$ | 0.0058 $(kg.m^2)$ | $l_y$ | $0.1845 (m)$ |
+| Sampling time | 0.05 $(s)$ | 
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:

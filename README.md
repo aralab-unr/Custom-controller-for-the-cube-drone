@@ -99,10 +99,10 @@ roscore
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| m | List all new or modified files | $k_t$ | List all new or modified files |
-| $I_{xx}$ | Show file differences that haven't been staged | $k_d$ | Show file differences that haven't been staged |
-| $I_{yy}$ | Show file differences that haven't been staged | $l_x$ | Show file differences that haven't been staged |
-| $I_{zz}$ | Show file differences that haven't been staged | $l_y$ | Show file differences that haven't been staged |
+| $\text{PID}_z$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
+| $\text{PID}_{\phi}$ |  | $\text{PID}_{v}$ | P =; I=; D= |
+| $\text{PID}_{\theta}$ | 
+
 
 
 https://github.com/user-attachments/assets/c17747fc-f272-4769-bdf9-9989708ab5bc

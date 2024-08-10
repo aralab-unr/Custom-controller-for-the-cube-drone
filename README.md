@@ -107,11 +107,11 @@ rosrun cubedrone cuberangefinder
 The parameters of the climbing controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
+| $\phi_r$ |  | $\theta_r $ | |
+| $\psi_r$ |  | $z_r$ | |
 | $\text{PID}_z$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
 | $\text{PID}_{\phi}$ |  | $\text{PID}_{v}$ | P =; I=; D= |
 | $\text{PID}_{\theta}$ | 
-| $\phi_r$ |  | $\theta_r $ | |
-| $\psi_r$ |  | $z_r$ | |
 
 
 

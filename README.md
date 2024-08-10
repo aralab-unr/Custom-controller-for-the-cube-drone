@@ -61,6 +61,8 @@ The parameters of the flying controller are as follows:
 | $k_{dx}$ |  | $\text{PID}_{\phi}$ | P =; I=; D= |
 | $k_{py}$ |  | $\text{PID}_{\theta}$ | P =; I=; D= |
 | $k_{dy}$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
+| $x_r$ |  | $ y_r $ | |
+| $z_r$ |  | $ \psi_r $ | |
 
 ### b. **Moving mode:**   
 Follow these commands in order to run the moving mode:
@@ -84,6 +86,7 @@ The parameters of the moving controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
 | $\text{PID}_{\psi}$ |  | $\text{PID}_{v}$ |  |
+| $x_r$ |  | $ y_r $ | |
 
 ### c. **Climbing mode:**   
 An overview of the climbing controller framework is shown as follows:
@@ -107,6 +110,8 @@ The parameters of the climbing controller are as follows:
 | $\text{PID}_z$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
 | $\text{PID}_{\phi}$ |  | $\text{PID}_{v}$ | P =; I=; D= |
 | $\text{PID}_{\theta}$ | 
+| $x_r$ |  | $ y_r $ | |
+| $z_r$ |  | $ \psi_r $ | |
 
 
 

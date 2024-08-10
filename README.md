@@ -46,9 +46,9 @@ Follow these commands in order to run the flying mode:
 # start ros server
 roscore
 # start gazebo simulator
-
+roslaunch cubedrone gazebo.launch
 # start flying controller
-
+rosrun cubedrone cubecontroller_node
 ```
 
 https://github.com/user-attachments/assets/a751fc7a-9035-4bb7-8fea-c892e7abaf63
@@ -69,9 +69,9 @@ Follow these commands in order to run the moving mode:
 # start ros server
 roscore
 # start gazebo simulator
-
+roslaunch cubedrone gazebo.launch
 # start moving controller
-
+rosrun cubedrone movingcubedrone
 ```
 The moving controller is designed based on this algorithm:
 <p align='left'>
@@ -97,9 +97,9 @@ Follow these commands in order to run the climbing mode:
 # start ros server
 roscore
 # start gazebo simulator
-
+roslaunch cubedrone rangefinder.launch
 # start flying controller
-
+rosrun cubedrone cuberangefinder
 ```
 The parameters of the climbing controller are as follows:
 | Parameter | Value | Parameter | Value |

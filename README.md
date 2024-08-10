@@ -63,6 +63,7 @@ The parameters of the flying controller are as follows:
 | $k_{dy}$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
 
 ### b. **Moving mode:**   
+Follow these commands in order to run the moving mode:
 
 ```
 # start ros server
@@ -72,6 +73,7 @@ roscore
 # start moving controller
 
 ```
+The moving controller is designed based on this algorithm:
 <p align='left'>
     <img src="cubedrone/images/algorithmcube.png" width="450" />
 </p>
@@ -90,6 +92,8 @@ An overview of the climbing controller framework is shown as follows:
 </p>
 
 ```
+Follow these commands in order to run the climbing mode:
+
 # start ros server
 roscore
 # start gazebo simulator

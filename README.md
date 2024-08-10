@@ -53,7 +53,7 @@ roscore
 
 https://github.com/user-attachments/assets/a751fc7a-9035-4bb7-8fea-c892e7abaf63
 
-The parameter of the flying controller is as follows:
+The parameters of the flying controller are as follows:
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
@@ -78,6 +78,7 @@ roscore
 
 https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e
 
+The parameters of the moving controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
 | $\text{PID}_{\psi}$ |  | $\text{PID}_{v}$ |  |
@@ -96,7 +97,7 @@ roscore
 # start flying controller
 
 ```
-
+The parameters of the climbing controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
 | $\text{PID}_z$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |

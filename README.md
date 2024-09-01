@@ -13,16 +13,20 @@ The custom controller is designed in:
 Follow these commands to install the package:
 
 ```shell
-# Step 1: Clone this repo into your workspace
-cd ~/catkin_ws/src
-git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
+# Step 1: Create and build a catkin workspace:
+$ mkdir -p ~/dev_ws/src
+$ cd ~/dev_ws/
+$ catkin_make
+$ echo "source /dev_ws/devel/setup.bash" >> ~/.bashrc
+$ source ~/.bashrc
 
-# Step 2: Build the workspace using catkin_make
-cd ~/catkin_ws
-catkin_make
+# Step 2: Clone this repo into your workspace
+$ cd ~/dev_ws/src
+$ git clone --recursive https://github.com/aralab-unr/Custom-controller-for-the-cube-drone.git
 
-# Step 3: Source the environment variables
-source devel/setup.bash
+# Step 3: Build the catkin workspace for this package
+$ cd ~/dev_ws
+$ catkin_make
 ```
 # Contents
 This section shows how to run the simulation and the results of each **flying**, **running**, and **climbing** mode. The cube-drone parameters are imported from URDF file as:

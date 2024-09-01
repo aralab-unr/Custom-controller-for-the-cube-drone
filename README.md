@@ -79,6 +79,7 @@ roslaunch cubedrone gazebo.launch
 # start moving controller
 rosrun cubedrone movingcubedrone
 ```
+The moving mode is divided into two phases. In the first one, two side propellers will spin opposite to turn the cube to the desired position. In the second one, two side propellers will spin with the same velocity to move the cube toward the desired position. For phase one, the desired yaw angle is proposed as: $(\frac{y_r-y}{x_r-x})$
 The moving controller is designed based on this algorithm:
 <p align='left'>
     <img src="cubedrone/images/algorithmcube.png" width="450" />

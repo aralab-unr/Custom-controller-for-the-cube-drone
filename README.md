@@ -65,12 +65,12 @@ The parameters of the flying controller are as follows:
 
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| $k_{px}$ |  | $\text{PID}_z$ | P =; I=; D= |
-| $k_{dx}$ |  | $\text{PID}_{\phi}$ | P =; I=; D= |
-| $k_{py}$ |  | $\text{PID}_{\theta}$ | P =; I=; D= |
-| $k_{dy}$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
-| $x_r$ |  | $y_r$ | |
-| $z_r$ |  | $\psi_r$ | |
+| $k_{px}$ | 0.1 | $\text{PID}_z$ | P = 8; I = 0; D = 5.75 |
+| $k_{dx}$ | 0.15 | $\text{PID}_{\phi}$ | P = 0.08; I = 0; D = 0.05 |
+| $k_{py}$ | 0.1 | $\text{PID}_{\theta}$ | P = 0.08; I = 0; D = 0.05|
+| $k_{dy}$ | 0.15 | $\text{PID}_{\psi}$ | P = 0.05; I = 0; D = 0.04 |
+| $x_r $ | 5 | $y_r $ | 5 |
+| $z_r $ | 5 | $\psi_r $ | 0 |
 
 ### b. **Moving mode:**   
 Follow these commands in order to run the moving mode:
@@ -93,8 +93,8 @@ https://github.com/user-attachments/assets/f47c8db2-a66a-4f89-b168-1131a725187e
 The parameters of the moving controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| $\text{PID}_{\psi}$ |  | $\text{PID}_{v}$ |  |
-| $x_r$ |  | $y_r$ | |
+| $\text{PID}_{\psi}$ | P = 2.5; I = 0; D = 1.4 | $\text{PID}_{v}$ | P = 50.4; I = 0.05; D = 15.4 |
+| $x_r$ | 7.5 | $y_r$ | 5 |
 
 ### c. **Climbing mode:**   
 An overview of the climbing controller framework is shown as follows:
@@ -115,11 +115,11 @@ rosrun cubedrone cuberangefinder
 The parameters of the climbing controller are as follows:
 | Parameter | Value | Parameter | Value |
 | --- | --- | --- | --- 
-| $\phi_r$ |  | $\theta_r $ | |
-| $\psi_r$ |  | $z_r$ | |
-| $\text{PID}_z$ |  | $\text{PID}_{\psi}$ | P =; I=; D= |
-| $\text{PID}_{\phi}$ |  | $\text{PID}_{v}$ | P =; I=; D= |
-| $\text{PID}_{\theta}$ | 
+| $\phi_r$ | 0  | $\theta_r $ | 0 |
+| $\psi_r$ | 0 | $z_r$ | 1.5 |
+| $\text{PID}_z$ | P = 8; I = 0; D = 5.75 | $\text{PID}_{\psi}$ | P = 0.05; I = 0; D = 0.04 |
+| $\text{PID}_{\phi}$ | P = 0.5; I = 0; D = 0.4  | $\text{PID}_{v}$ | P = 0.75 ; I = 0; D = 0|
+| $\text{PID}_{\theta}$ | P = 0.5; I = 0; D = 0.4 |
 
 
 

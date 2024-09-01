@@ -38,6 +38,8 @@ This section shows how to run the simulation and the results of each **flying**,
 | $I_{yy}$ | 0.0023 $(kg.m^2)$ | $l_x$ | $0.1845 (m)$ |
 | $I_{zz}$ | 0.0058 $(kg.m^2)$ | $l_y$ |  $0.219 (m)$ |
 | Sampling time | 0.05 $(s)$ | 
+More details of each mode and its algorithm can be found in this file:
+[Clarification of the custom controller for the Cube-Drone.pdf](https://github.com/user-attachments/files/16827489/Clarification.of.the.custom.controller.for.the.Cube-Drone.pdf)
 
 ### a. **Flying mode:**   
 An overview of the flying controller framework is shown as follows:

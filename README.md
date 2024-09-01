@@ -17,8 +17,7 @@ Follow these commands to install the package:
 $ mkdir -p ~/dev_ws/src
 $ cd ~/dev_ws/
 $ catkin_make
-$ echo "source /dev_ws/devel/setup.bash" >> ~/.bashrc
-$ source ~/.bashrc
+$ echo "source ~/dev_ws/devel/setup.bash" >> ~/.bashrc
 
 # Step 2: Clone this repo into your workspace
 $ cd ~/dev_ws/src

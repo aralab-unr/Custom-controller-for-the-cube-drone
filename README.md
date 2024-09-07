@@ -1,6 +1,6 @@
 # Cube-Drone ROS Simulation and Custom Controller
 
-This repository contains the ROS simulation and details of the custom controller for the cube-drone. It clarifies the contents of the manuscript: [Cube_drone__ICRA_ARA.pdf](https://github.com/user-attachments/files/16533043/Cube_drone__ICRA_ARA.pdf).
+This repository contains the ROS simulation and details of the custom controller for the Cube-Drone.
 
 ## Software Requirements & Setup
 

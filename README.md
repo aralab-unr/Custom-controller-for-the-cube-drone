@@ -38,6 +38,8 @@ This section shows how to run the simulation and the results of each **flying**,
 | $I_{zz}$ | 0.0058 $(kg.m^2)$ | $l_y$ |  $0.219 (m)$ |
 | Sampling time | 0.05 $(s)$ | 
 
+More about the dynamical model can be found in this file:
+[Cube_drone__ICRA_ARA.pdf](https://github.com/user-attachments/files/18726990/Cube_drone__ICRA_ARA.pdf)
 
 More details of each mode and its algorithm can be found in this file:
 [Clarification of the custom controller for the Cube-Drone.pdf](https://github.com/user-attachments/files/16827489/Clarification.of.the.custom.controller.for.the.Cube-Drone.pdf)
